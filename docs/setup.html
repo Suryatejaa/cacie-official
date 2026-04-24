@@ -12,12 +12,20 @@
     <p class="eyebrow">Setup</p>
     <h1>Install CALCIE for macOS</h1>
     <ol class="steps">
-      <li>Download the signed DMG from the release page.</li>
+      <li>Download the CALCIE alpha DMG from the release page.</li>
       <li>Drag <strong>CALCIE.app</strong> into Applications.</li>
+      <li>If macOS says CALCIE is damaged, open Terminal and run <code>xattr -dr com.apple.quarantine /Applications/CALCIE.app</code>.</li>
       <li>Open CALCIE from Applications, not from the build folder.</li>
       <li>Grant Microphone, Accessibility, Screen Recording, and Notifications when prompted.</li>
       <li>Use Advanced Options to import ChatGPT memory if you want continuity.</li>
     </ol>
+
+    <section class="doc-card">
+      <h2>Important alpha note</h2>
+      <p>CALCIE 0.1.0 is an unsigned / not-yet-notarized macOS alpha. Some Macs will block the first launch after download. If that happens, copy CALCIE into Applications first, then run the command below once:</p>
+      <pre><code>xattr -dr com.apple.quarantine /Applications/CALCIE.app</code></pre>
+      <p>After that, open CALCIE from Applications.</p>
+    </section>
 
     <section class="doc-card">
       <h2>First-run memory import</h2>
