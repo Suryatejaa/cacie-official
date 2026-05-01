@@ -51,12 +51,18 @@
 
     <section class="doc-card">
       <h2>API keys</h2>
-      <p>Without provider keys, CALCIE still handles some deterministic tasks, but richer chat/search/media flows may be limited. The easiest path is:</p>
+      <p>You can still test some deterministic/local features without your own provider key, but richer chat, search, and reasoning flows work much better with a Gemini key.</p>
       <ol class="steps">
         <li>Copy <code>.env.example</code> to <code>.env</code>.</li>
-        <li>Add at least a valid <code>GEMINI_API_KEY</code>.</li>
+        <li>Open <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a>.</li>
+        <li>Sign in with your Google account.</li>
+        <li>Create a free Gemini API key.</li>
+        <li>Open the new <code>.env</code> file in a text editor.</li>
+        <li>Paste your key like this: <code>GEMINI_API_KEY=your_key_here</code>.</li>
+        <li>Save the file.</li>
         <li>Restart CALCIE after editing the file.</li>
       </ol>
+      <p><strong>Good default for testers:</strong> add only <code>GEMINI_API_KEY</code> first. You can ignore the other optional keys unless you specifically want those providers.</p>
     </section>
 
     <section class="doc-card">
